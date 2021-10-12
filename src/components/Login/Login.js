@@ -4,11 +4,13 @@ import useFirebase from '../../hooks/useFirebase';
 import './Login.css';
 
 const Login = () => {
-    const { signInUsingGoogle } = useFirebase();
+    const { signInUsingGoogle, signInUsingGithub } = useFirebase();
     return (
         <div>
             <h2>Please Login</h2>
             <button onClick={signInUsingGoogle}>Google Sign In</button>
+            <br />
+            <button onClick={signInUsingGithub}>Github Sign In</button>
             <br />
             <Link to="/register">New User?</Link>
         </div>
